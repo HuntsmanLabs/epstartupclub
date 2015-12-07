@@ -4,7 +4,7 @@
     <h2>Log In</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+        <%= render partial: "layouts/devisemessages" %>
 
         <div class="input-field">
         <%= f.email_field :email, :id => "email", :class => "validate", :placeholder => "Email" %>
@@ -19,11 +19,5 @@
 
         <% end %>
 
-  </div>
-</div>
-
-<div class="row">
-  <div class="col m6 offset-m3 center">
-    <%= render "devise/shared/links" %>
   </div>
 </div>
